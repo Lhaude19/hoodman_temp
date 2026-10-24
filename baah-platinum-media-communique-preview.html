@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fbfaf7">
+<title>BAAH PLATINUM™; Brands Ambassador Africa Impact Honors</title>
+<meta name="description" content="BAAH PLATINUM™ recognizes African brand ambassadors turning brand influence into economic growth and social impact.">
+
+<!-- ===== FAVICON ===== -->
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png">
+
+<style>
+  :root{
+    --paper:#fbfaf7;
+    --panel:#ffffff;
+    --ink:#15171c;
+    --ink-soft:#525863;
+    --ink-faint:#8b919c;
+    --rule:#e3dfd5;
+    --accent:#8a6a3b;
+    --accent-ink:#6d5230;
+    --accent-wash:#f3ecdf;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+    --sans:ui-sans-serif,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    --maxw:1160px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background-color:var(--paper);
+    background-image:
+      radial-gradient(circle at 12% 0%, rgba(138,106,59,.07), transparent 28%),
+      radial-gradient(circle at 88% 12%, rgba(29,36,48,.05), transparent 26%),
+      repeating-linear-gradient(0deg, rgba(21,23,28,.018) 0 1px, transparent 1px 4px);
+    color:var(--ink);
+    font-family:var(--serif);
+    font-size:18px;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--accent-wash);color:var(--accent-ink)}
+  a{color:var(--accent-ink)}
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,250,247,.86);
+    -webkit-backdrop-filter:saturate(180%) blur(12px);
+    backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--rule);
+  }
+  .topbar-inner{
+    max-width:var(--maxw);margin:0 auto;padding:.65rem 1.5rem;
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  }
+  .brand{display:flex;align-items:center;gap:.75rem;min-width:0}
+
+  .brand-logo{
+    flex:none;display:block;
+    width:34px;height:34px;
+    object-fit:contain;
+    background:transparent;
+    border-radius:0;
+    box-shadow:none;
+  }
+
+  .brand-text{display:flex;flex-direction:column;min-width:0;font-family:var(--sans)}
+  .brand-text strong{
+    font-size:.82rem;font-weight:650;letter-spacing:-.005em;color:var(--ink);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .actions{display:flex;gap:.5rem;flex:none}
+  .btn{
+    font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.01em;
+    padding:.5rem .9rem;border-radius:999px;border:1px solid var(--rule);
+    background:#fff;color:var(--ink);cursor:pointer;
+    transition:transform .15s ease, border-color .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{border-color:#cbc4b3;transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,.05)}
+  .btn:active{transform:translateY(0)}
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .btn-primary{background:var(--ink);border-color:var(--ink);color:#fff}
+  .btn-primary:hover{background:#000;border-color:#000;box-shadow:0 6px 16px rgba(0,0,0,.16)}
+  .progress{height:2px;overflow:hidden}
+  .progress span{
+    display:block;height:100%;background:linear-gradient(90deg,var(--accent),#b99a66);
+    transform:scaleX(0);transform-origin:0 50%;
+    transition:transform .12s linear;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{max-width:var(--maxw);margin:0 auto;padding:4.75rem 1.5rem 0;position:relative;overflow:hidden}
+  .hero::after{
+    content:"100";
+    position:absolute;right:1.5rem;top:.5rem;
+    font-family:var(--serif);font-size:clamp(7rem,17vw,13rem);
+    line-height:1;color:rgba(138,106,59,.055);
+    pointer-events:none;user-select:none;z-index:0;
+    letter-spacing:-.04em;
+  }
+  .hero > *{position:relative;z-index:1}
+  h1{
+    font-size:clamp(1.8rem,4.1vw,3rem);
+    line-height:1.1;letter-spacing:-.022em;font-weight:600;
+    margin:0 0 1.15rem;max-width:30ch;
+  }
+  .h1-brand{color:var(--accent-ink)}
+  .lede{
+    font-size:1.06rem;line-height:1.65;color:var(--ink-soft);
+    max-width:62ch;margin:0;
+  }
+  .meta{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;
+    margin:2.5rem 0 0;padding:0;border:0;
+  }
+  .meta > div{
+    background:#fff;border:1px solid var(--rule);border-radius:12px;
+    padding:.85rem 1rem;
+    box-shadow:0 1px 0 rgba(21,23,28,.025);
+  }
+  .meta dt{
+    font-family:var(--sans);font-size:.66rem;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);
+    margin-bottom:.3rem;
+  }
+  .meta dd{margin:0;font-family:var(--sans);font-size:.9rem;font-weight:650;color:var(--ink)}
+
+  /* ---------- layout ---------- */
+  .layout{
+    max-width:var(--maxw);margin:0 auto;padding:3rem 1.5rem 5rem;
+    display:grid;grid-template-columns:238px minmax(0,1fr);gap:3rem;align-items:start;
+  }
+
+  /* ---------- contents ---------- */
+  .toc{
+    position:sticky;top:86px;font-family:var(--sans);
+    background:#fff;border:1px solid var(--rule);border-radius:14px;
+    padding:1.15rem 1.15rem 1.25rem;
+    box-shadow:0 1px 2px rgba(21,23,28,.03);
+  }
+  .toc-title{
+    font-size:.66rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--ink-faint);margin:0 0 .85rem;
+  }
+  .toc nav{display:flex;flex-direction:column;border-left:1px solid var(--rule)}
+  .toc a{
+    font-size:.82rem;line-height:1.35;color:var(--ink-soft);text-decoration:none;
+    padding:.4rem 0 .4rem 1rem;margin-left:-1px;
+    border-left:2px solid transparent;transition:color .15s ease, border-color .15s ease;
+  }
+  .toc a:hover{color:var(--ink)}
+  .toc a.active{color:var(--accent-ink);border-left-color:var(--accent);font-weight:650}
+  .toc-cta{margin-top:1.35rem}
+  .toc-cta .btn{width:100%;justify-content:center}
+  .toc-note{
+    font-size:.72rem;line-height:1.5;color:var(--ink-faint);
+    margin:.7rem 0 0;
+  }
+
+  /* ---------- document sheet ---------- */
+  .doc{
+    max-width:72ch;
+    background:#fff;border:1px solid var(--rule);border-radius:18px;
+    padding:clamp(1.5rem,3vw,2.75rem);
+    box-shadow:
+      0 22px 46px -30px rgba(21,23,28,.3),
+      0 2px 6px rgba(21,23,28,.04);
+    position:relative;
+  }
+  .doc::before{
+    content:"";position:absolute;top:0;left:2rem;right:2rem;height:3px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-wash),var(--accent));
+    border-radius:0 0 3px 3px;opacity:.65;
+  }
+  .doc section{margin:0 0 2.9rem;scroll-margin-top:96px}
+  .doc section:last-child{margin-bottom:0}
+  .doc h2{
+    display:flex;align-items:center;gap:.7rem;
+    font-family:var(--sans);font-size:.76rem;font-weight:700;
+    letter-spacing:.15em;text-transform:uppercase;color:var(--accent-ink);
+    margin:0 0 1.15rem;padding-bottom:.6rem;border-bottom:1px solid var(--rule);
+  }
+  .sec-num{
+    flex:none;font-family:var(--mono);font-size:.68rem;font-weight:600;
+    letter-spacing:.02em;color:var(--accent-ink);
+    background:var(--accent-wash);border:1px solid rgba(138,106,59,.22);
+    border-radius:4px;padding:.14rem .4rem;line-height:1.2;
+  }
+  .doc p{font-size:1.0625rem;line-height:1.78;margin:0 0 1.15rem;color:#22252c}
+  .doc p:last-child{margin-bottom:0}
+  .doc strong{font-weight:600}
+
+  /* ---------- tick list ---------- */
+  .doc ul.ticks{list-style:none;margin:0 0 1.25rem;padding:0}
+  .doc ul.ticks li{
+    position:relative;padding-left:1.7rem;margin:0 0 .62rem;
+    font-size:1.0625rem;line-height:1.7;color:#22252c;
+  }
+  .doc ul.ticks li::before{
+    content:"✓";position:absolute;left:0;top:.02em;
+    color:var(--accent);font-family:var(--sans);font-size:.95em;font-weight:700;
+  }
+  .doc ul.ticks li strong{font-weight:650}
+
+  /* ---------- inline figure (natural aspect ratio, no crop) ---------- */
+  .doc-figure{margin:0 0 2.9rem}
+  .doc-figure a{
+    position:relative;display:block;border-radius:12px;overflow:hidden;
+    border:1px solid var(--rule);background:#fff;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .doc-figure a:hover{
+    transform:translateY(-3px);
+    border-color:#d2cab9;
+    box-shadow:0 14px 30px -12px rgba(21,23,28,.22);
+  }
+  .doc-figure a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .doc-figure img{
+    display:block;width:100%;height:auto;
+    transition:transform .45s ease;
+  }
+  .doc-figure a:hover img{transform:scale(1.02)}
+  .doc-figure a::after{
+    content:"View page ↗";
+    position:absolute;left:0;right:0;bottom:0;
+    padding:1.6rem 1rem .8rem;
+    font-family:var(--sans);font-size:.74rem;font-weight:600;letter-spacing:.02em;
+    color:#fff;text-align:right;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.62));
+    transform:translateY(100%);transition:transform .25s ease;
+  }
+  .doc-figure a:hover::after{transform:translateY(0)}
+
+  /* ---------- declaration ---------- */
+  .declaration{
+    background:linear-gradient(135deg,#1d2430,#2b3546);
+    color:#f2ead9;border-radius:14px;
+    padding:1.7rem 1.55rem;margin:0 0 1.25rem;
+    position:relative;overflow:hidden;
+    box-shadow:0 18px 36px -24px rgba(21,23,28,.55);
+  }
+  .declaration::before{
+    content:"“";position:absolute;top:-1.9rem;right:.5rem;
+    font-size:9rem;line-height:1;color:rgba(233,220,194,.1);
+    font-family:var(--serif);pointer-events:none;
+  }
+  .declaration p{
+    position:relative;margin:0;color:inherit;
+    font-size:1.06rem;line-height:1.68;
+  }
+  .declaration p + p{
+    margin-top:.85rem;font-size:.9rem;line-height:1.65;color:#cbc2af;
+  }
+
+  /* ---------- callout ---------- */
+  .callout{
+    background:linear-gradient(180deg,var(--accent-wash),#f7f1e6);
+    border-left:3px solid var(--accent);
+    border-radius:0 10px 10px 0;
+    padding:1.1rem 1.35rem;
+    margin:0 0 1.15rem;
+    font-size:.97rem;line-height:1.7;color:#3d3428;
+  }
+  .callout p{margin:0;font-size:inherit;color:inherit}
+  .callout a{
+    color:var(--accent-ink);font-weight:600;
+    text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px;
+  }
+  .callout a:hover{color:#4a3620}
+
+  /* ---------- honorees by region ---------- */
+  .region{
+    border:1px solid var(--rule);border-radius:14px;
+    padding:1.05rem 1.15rem 1.15rem;margin:0 0 1rem;
+    background:linear-gradient(180deg,#fff,#fdfbf7);
+  }
+  .region:last-child{margin-bottom:0}
+  .region-title{
+    display:flex;align-items:center;gap:.55rem;flex-wrap:wrap;
+    font-family:var(--sans);font-size:.72rem;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);
+    margin:0 0 .85rem;
+  }
+  .region-count{
+    font-family:var(--mono);font-size:.66rem;font-weight:600;letter-spacing:.02em;
+    color:var(--ink-faint);background:var(--accent-wash);
+    border:1px solid rgba(138,106,59,.18);
+    padding:.06rem .38rem;border-radius:4px;
+  }
+  .amb-list{
+    list-style:none;margin:0;padding:0;
+    columns:2;column-gap:1.5rem;
+    font-family:var(--sans);font-size:.86rem;line-height:1.5;
+  }
+  .amb-list li{
+    position:relative;padding:.3rem 0 .3rem 1rem;
+    break-inside:avoid;color:#2a2e36;
+  }
+  .amb-list li::before{
+    content:"";position:absolute;left:0;top:.85em;
+    width:4px;height:4px;border-radius:50%;
+    background:var(--accent);opacity:.6;
+  }
+
+  /* ---------- issued by ---------- */
+  .sig-block{margin-top:0}
+  .sig-block .sig{min-width:250px}
+  .sig-name{
+    font-family:var(--sans);font-weight:700;font-size:1.05rem;
+    margin:0 0 .15rem;color:var(--ink);line-height:1.3;
+  }
+  .sig-role{
+    font-family:var(--sans);font-size:.84rem;line-height:1.45;
+    color:var(--ink-soft);margin:0;
+  }
+
+  /* ---------- footer ---------- */
+  .footer{background:#15171c;color:#c9c3b7;border-top:3px solid var(--accent)}
+  .footer-inner{
+    max-width:var(--maxw);margin:0 auto;padding:2.25rem 1.5rem;
+    display:flex;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+    font-family:var(--sans);font-size:.82rem;line-height:1.6;
+  }
+  .footer-inner p{margin:0}
+  .footer-inner strong{color:#fff;font-weight:650}
+  .footer-inner a{
+    color:#e6d7bd;text-decoration:underline;
+    text-decoration-thickness:1px;text-underline-offset:2px;
+  }
+  .footer-inner a:hover{color:#fff}
+
+  /* ---------- entrance motion ---------- */
+  @keyframes fadeUp{
+    from{opacity:0;transform:translateY(14px)}
+    to{opacity:1;transform:none}
+  }
+  .hero h1,.hero .lede,.hero .meta,.doc{
+    animation:fadeUp .65s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .hero .lede{animation-delay:.05s}
+  .hero .meta{animation-delay:.1s}
+  .doc{animation-delay:.16s}
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important}
+    html{scroll-behavior:auto}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .layout{grid-template-columns:1fr;gap:0;padding-top:2rem}
+    .toc{display:none}
+    .hero{padding-top:3rem}
+    .hero::after{font-size:8rem;top:.4rem;right:1rem}
+    .meta{grid-template-columns:repeat(2,1fr);gap:.85rem}
+  }
+  @media (max-width:560px){
+    body{font-size:17px}
+    .brand-text strong{max-width:42vw}
+    .btn{padding:.45rem .75rem;font-size:.76rem}
+    .amb-list{columns:1}
+    .footer-inner{flex-direction:column}
+  }
+
+  /* ---------- print ---------- */
+  @media print{
+    @page{margin:18mm 16mm}
+    body{background:#fff;color:#000;font-size:11.5pt;background-image:none}
+    .topbar,.toc,.progress,.no-print{display:none !important}
+    .hero{padding:0 0 .5rem}
+    .hero::after{display:none}
+    .hero h1{font-size:20pt;max-width:none}
+    .lede{color:#333}
+    .meta{margin-top:1.2rem;gap:.5rem}
+    .meta > div{box-shadow:none;background:transparent;padding:.4rem .6rem}
+    .layout{display:block;padding:0}
+    .doc{
+      max-width:none;background:transparent;border:0;border-radius:0;
+      box-shadow:none;padding:0;
+    }
+    .doc::before{display:none}
+    .doc p{color:#000;orphans:3;widows:3}
+    .doc section{break-inside:auto;margin-bottom:1.4rem}
+    .doc h2{color:#000;break-after:avoid}
+    .sec-num{background:transparent;border:0;padding:0}
+    .declaration{background:#f4f1ea;color:#000;box-shadow:none}
+    .declaration p+p{color:#333}
+    .declaration::before{display:none}
+    .callout{background:#f4f1ea;border-left-color:#666;color:#000}
+    .region{break-inside:avoid;background:transparent}
+    .amb-list{columns:2}
+    .doc-figure{break-inside:avoid}
+    .doc-figure a::after{display:none}
+    .sig-block{break-inside:avoid}
+    .footer{background:#fff;color:#000;border-top:1px solid #ccc}
+    .footer-inner strong,.footer-inner a{color:#000}
+    a{color:#000;text-decoration:none}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <img class="brand-logo"
+           src="https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png"
+           alt="HoodmanLive logo"
+           width="34" height="34">
+      <div class="brand-text">
+        <strong>HoodmanLive</strong>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn" id="copyLink" type="button">Copy link</button>
+      <button class="btn btn-primary" id="printBtn" type="button">Print / PDF</button>
+    </div>
+  </div>
+  <div class="progress"><span id="progressBar"></span></div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <h1><span class="h1-brand">BAAH PLATINUM™</span> Recognizes African Brand Ambassadors Turning Brand Influence into Economic Growth and Social Impact</h1>
+  <p class="lede">
+    A new chapter in African brand recognition; celebrating patriotic brand representation,
+    measurable socioeconomic contribution, inclusion, diversity and the power of influence
+    to transform lives and markets.
+  </p>
+
+  <dl class="meta">
+    <div>
+      <dt>Location</dt>
+      <dd>Accra, Ghana</dd>
+    </div>
+    <div>
+      <dt>Date</dt>
+      <dd>To be announced</dd>
+    </div>
+    <div>
+      <dt>Status</dt>
+      <dd>For immediate release</dd>
+    </div>
+  </dl>
+</section>
+
+<!-- ============ BODY ============ -->
+<div class="layout">
+
+  <!-- Table of contents -->
+  <aside class="toc">
+    <p class="toc-title">Contents</p>
+    <nav aria-label="Document contents">
+      <a href="#announcement">The Announcement</a>
+      <a href="#standard">A New Standard</a>
+      <a href="#influence">Influence as Development</a>
+      <a href="#vision">A Continental Vision</a>
+      <a href="#honors">Revitalizing the Honors</a>
+      <a href="#action">From Recognition to Action</a>
+      <a href="#invitation">An Invitation</a>
+      <a href="#declaration">The Declaration</a>
+      <a href="#honorees">Africa&#8217;s Top 100</a>
+      <a href="#issued">Issued by</a>
+    </nav>
+    <div class="toc-cta">
+      <button class="btn" type="button" onclick="window.print()">Download PDF</button>
+      <p class="toc-note">Use &#8220;Save as PDF&#8221; in the print dialog.</p>
+    </div>
+  </aside>
+
+  <!-- Document -->
+  <article class="doc">
+
+    <section id="announcement">
+      <h2><span class="sec-num">01</span> The Announcement</h2>
+      <p>BAAH PLATINUM™, the distinguished recognition platform of the Brands Ambassador Africa Impact Honors, announces its commitment to recognizing Africa&#8217;s Top 100 Most Influential Brand Ambassadors whose contributions extend beyond celebrity visibility and social media popularity to deliver meaningful value for the brands they represent and measurable social impact for their communities, countries and the African continent.</p>
+      <p>This recognition represents a defining proposition: <strong>brand ambassadorship must be measured not merely by the attention an individual commands, but by the economic value they create, the communities they empower and the development they inspire.</strong></p>
+      <p>Across Africa, brand ambassadors possess the potential to do far more than endorse products and services. They can influence consumer confidence, strengthen emerging businesses, expand market access, stimulate local enterprise, promote inclusion and mobilize public attention around causes that advance human dignity and socioeconomic progress.</p>
+      <p>BAAH PLATINUM™ seeks to recognize those exceptional Africans who have embraced this broader responsibility; individuals who have leveraged their professional standing, public influence and brand representation to advance both commercial success and meaningful social good.</p>
+    </section>
+
+    <!-- ============================================================
+         INLINE IMAGE 1 — Asset 12-100.jpg
+         ============================================================ -->
+    <figure class="doc-figure">
+      <a href="https://example.org/another-page-1" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2012-100.jpg"
+             alt="Brand ambassadors at the launch">
+      </a>
+    </figure>
+
+    <section id="standard">
+      <h2><span class="sec-num">02</span> A New Standard for African Brand Ambassadorship</h2>
+      <p>The BAAH PLATINUM™ recognition is deliberately distinguished from conventional celebrity rankings and popularity-based awards.</p>
+      <p>It is <strong>not simply a list of people who represent brands, nor a contest to identify ambassadors with the largest following</strong>. It is a recognition framework for individuals whose brand representation demonstrates a deeper commitment to economic contribution, responsible influence, social responsibility and Africa&#8217;s sustainable development.</p>
+      <p>The initiative seeks to celebrate brand ambassadors who have demonstrated the capacity to:</p>
+      <ul class="ticks">
+        <li>Contribute to the growth, visibility, credibility and market competitiveness of the brands they represent.</li>
+        <li>Support African-owned businesses, emerging enterprises and promising local brands in accessing vibrant, sustainable markets.</li>
+        <li>Translate public influence into tangible community development and social-impact initiatives.</li>
+        <li>Champion inclusion, diversity, opportunity and the participation of underrepresented groups in economic development.</li>
+        <li>Demonstrate professional integrity, patriotic commitment and responsible brand representation.</li>
+        <li>Advance youth empowerment, entrepreneurship, skills development and other priorities relevant to Africa&#8217;s long-term socioeconomic transformation.</li>
+      </ul>
+      <p>Through this approach, BAAH PLATINUM™ seeks to establish a more purposeful conversation about the relationship between commercial influence, corporate responsibility and continental development.</p>
+    </section>
+
+    <section id="influence">
+      <h2><span class="sec-num">03</span> Recognizing Influence as an Instrument of Development</h2>
+      <p>Africa&#8217;s economic future depends not only on capital, infrastructure and policy, but also on the people and institutions capable of connecting products, ideas, opportunities and communities.</p>
+      <p>Brand ambassadors occupy a distinctive position within this landscape. Their public visibility can help businesses earn consumer confidence, introduce products to new audiences, strengthen brand identity and encourage market participation.</p>
+      <p>When this influence is exercised responsibly, it can become a practical instrument for enterprise development and social progress.</p>
+      <p>BAAH PLATINUM™ therefore advocates a model of <strong>impact-centered brand ambassadorship</strong>; one in which commercial performance and social contribution reinforce each other.</p>
+      <p>The initiative recognizes that an ambassador&#8217;s value should be considered through credible evidence of contribution, including documented brand campaigns, market-development achievements, community interventions, youth initiatives, employment-related outcomes and other verifiable results.</p>
+      <p>The intention is to elevate the standards of brand representation across Africa while inspiring the next generation of ambassadors to view their platforms as instruments of opportunity and development.</p>
+    </section>
+
+    <!-- ============================================================
+         INLINE IMAGE 2 — Asset 13-100.jpg
+         ============================================================ -->
+    <figure class="doc-figure">
+      <a href="https://example.org/another-page-2" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2013-100.jpg"
+             alt="Ambassadors in conversation">
+      </a>
+    </figure>
+
+    <section id="vision">
+      <h2><span class="sec-num">04</span> A Continental Vision Anchored in Inclusion and Sustainable Development</h2>
+      <p>BAAH PLATINUM™ marks the beginning of an era in which African brand influence is recognized as a potential contributor to inclusive and sustainable development.</p>
+      <p>Its philosophy aligns with the broader aspirations of the <strong>African Continental Free Trade Area (AfCFTA)</strong>, which seeks to deepen intra-African trade, strengthen regional economic integration and expand opportunities for African businesses.</p>
+      <p>It also resonates with the <strong>United Nations Sustainable Development Goals (SDGs)</strong>, particularly those relating to decent work and economic growth, industry and innovation, reduced inequalities, responsible consumption and production, partnerships, and the empowerment of young people.</p>
+      <p>Within this framework, the recognition of distinguished brand ambassadors becomes more than an awards exercise. It becomes an opportunity to mobilize professional influence in support of African enterprise, local production, responsible consumption, social inclusion and sustainable market development.</p>
+      <p>BAAH PLATINUM™ envisions a continent where brand representation helps African businesses grow, where commercial success creates wider opportunities, and where public influence is increasingly associated with positive and measurable impact.</p>
+    </section>
+
+    <section id="honors">
+      <h2><span class="sec-num">05</span> Revitalizing the Brands Ambassador Africa Impact Honors</h2>
+      <p>The announcement also presents an opportunity to renew attention around the <strong>Brands Ambassador Africa Impact Honors; BAAH PLATINUM™</strong>, a platform conceived to celebrate distinguished brand ambassadors and empower them to contribute to the growth of promising African brands.</p>
+      <p>At the heart of the BAAH PLATINUM™ concept is the symbolic <strong>gold brooch</strong>, envisioned as a distinctive mark of recognition and responsibility.</p>
+      <p>Beyond its ceremonial value, the brooch represents a commitment to purposeful representation: carrying a brand with integrity, championing enterprise development and using influence to create opportunities for others.</p>
+      <p>The envisioned platform seeks to encourage recognized ambassadors to become practical advocates for emerging African brands by helping them gain visibility, connect with audiences, strengthen consumer confidence and pursue sustainable market growth.</p>
+      <p>The proposed rehosting of the Honors would provide a renewed continental platform for celebrating these contributions, strengthening partnerships among brands and ambassadors, and developing a more structured relationship between recognition and real-world impact.</p>
+      <p>Any renewed edition would benefit from transparent selection criteria, independent assessment, evidence-based impact evaluation and clearly defined participation arrangements.</p>
+    </section>
+
+    <section id="action">
+      <h2><span class="sec-num">06</span> From Recognition to Practical Action</h2>
+      <p>BAAH PLATINUM™ aspires to extend its influence beyond the announcement of honorees.</p>
+      <p>Its long-term ambition is to develop an impact-oriented platform connecting recognized ambassadors with emerging brands, corporate partners, youth-focused initiatives and community-development programmes.</p>
+      <p>Potential activities include:</p>
+      <ul class="ticks">
+        <li><strong>Emerging African Brands Empowerment:</strong> Connecting selected ambassadors with promising African businesses seeking stronger visibility, market entry and consumer engagement.</li>
+        <li><strong>Youth and Professional Mentorship:</strong> Encouraging recognized ambassadors to share practical lessons in professional development, entrepreneurship, communication, leadership and responsible public influence.</li>
+        <li><strong>Social Impact Partnerships:</strong> Promoting voluntary collaborations between ambassadors, businesses and community organizations around clearly defined development priorities.</li>
+        <li><strong>Inclusion and Diversity Advocacy:</strong> Celebrating contributions that widen participation in enterprise, employment, creativity and opportunity across African communities.</li>
+        <li><strong>Impact Documentation:</strong> Developing credible records of commercial contributions and social outcomes to strengthen accountability and demonstrate the value of responsible brand ambassadorship.</li>
+      </ul>
+      <p>These activities are proposed as part of the platform&#8217;s broader development ambition and would be implemented progressively through partnerships, resources and agreed programme commitments.</p>
+    </section>
+
+    <!-- ============================================================
+         INLINE IMAGE 3 — Asset 14-100.jpg
+         ============================================================ -->
+    <figure class="doc-figure">
+      <a href="https://example.org/another-page-3" target="_blank" rel="noopener">
+        <img src="https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2014-100.jpg"
+             alt="Community impact initiative">
+      </a>
+    </figure>
+
+    <section id="invitation">
+      <h2><span class="sec-num">07</span> An Invitation to Brands, Institutions and Development Partners</h2>
+      <p>BAAH PLATINUM™ invites African and international brands, corporate institutions, media organizations, development partners, business associations and social-impact organizations to participate in building a more purposeful culture of brand representation.</p>
+      <p>The platform offers an opportunity to explore new partnerships at the intersection of business growth, public influence, youth development and sustainable socioeconomic progress.</p>
+      <p>For participating brands, the proposition is clear: ambassadors can be more than promotional assets. With the right alignment, accountability and support, they can become partners in market development, enterprise visibility and social impact.</p>
+      <p>For ambassadors, the opportunity is equally significant: professional recognition can become a platform for deeper contribution to the communities and economies that sustain their influence.</p>
+      <p>For emerging African businesses, the initiative offers a vision of stronger connections between brand credibility, consumer engagement and sustainable market access.</p>
+    </section>
+
+    <section id="declaration">
+      <h2><span class="sec-num">08</span> The BAAH PLATINUM™ Declaration</h2>
+      <p>BAAH PLATINUM™ advances a simple but powerful principle:</p>
+      <div class="declaration">
+        <p>The true measure of brand influence is not only how many people an ambassador can reach, but also how much value that influence creates; and how positively it contributes to society.</p>
+        <p>Celebrating Influence. Rewarding Impact. Empowering African Brands.</p>
+      </div>
+      <p>Through the recognition of Africa&#8217;s Top 100 Most Influential Brand Ambassadors, the platform seeks to honour individuals whose professional achievements, commercial contributions and social-impact commitments exemplify this principle.</p>
+      <p>It is a call to brands to invest in purposeful representation, to ambassadors to lead with integrity, and to Africa&#8217;s business community to recognize influence as a resource that can be mobilized for shared prosperity.</p>
+      <p>The ambition is to help shape a future in which African brands grow stronger, young people gain greater opportunities, communities benefit from responsible corporate engagement, and commercial success contributes to the continent&#8217;s wider development aspirations.</p>
+    </section>
+
+    <section id="honorees">
+      <h2><span class="sec-num">09</span> Africa&#8217;s Top 100 Most Influential Brand Ambassadors</h2>
+
+      <div class="region">
+        <h3 class="region-title">Western Africa <span class="region-count">31</span></h3>
+        <ul class="amb-list">
+          <li>Nana Ama McBrown</li>
+          <li>Antione Semenyo</li>
+          <li>Jackie Appiah</li>
+          <li>Mohammed Kudus</li>
+          <li>Black Sheriff</li>
+          <li>Stonebwoy</li>
+          <li>Shatta Wale</li>
+          <li>Reggie Rockstone</li>
+          <li>Diana Hamilton</li>
+          <li>Giovanni Caleb</li>
+          <li>Berla Mundi</li>
+          <li>Serwaa Amihere</li>
+          <li>Asamoah Gyan</li>
+          <li>Ama Burland</li>
+          <li>Akrobeto</li>
+          <li>Khaby Lame</li>
+          <li>Davido</li>
+          <li>Tems</li>
+          <li>Asake</li>
+          <li>Rema</li>
+          <li>Simi</li>
+          <li>Adenkule Gold</li>
+          <li>Don Jazzy</li>
+          <li>Fireboy DML</li>
+          <li>Funke Adinkele</li>
+          <li>Hilda Balci</li>
+          <li>Tiwa Savage</li>
+          <li>Wizkid</li>
+          <li>Yemi Alade</li>
+          <li>Chef T</li>
+          <li>Sadio Mané</li>
+        </ul>
+      </div>
+
+      <div class="region">
+        <h3 class="region-title">Southern Africa <span class="region-count">25</span></h3>
+        <ul class="amb-list">
+          <li>Strive Masiyiwa</li>
+          <li>Lorraine Guyo</li>
+          <li>Winky D (Wallace Chirumiko)</li>
+          <li>Moojaya</li>
+          <li>Mutale Mwanza</li>
+          <li>Yo Maps (Elton Mulenga)</li>
+          <li>Chef 187 (Kondwani Kachingwe)</li>
+          <li>Minnie Dlamini</li>
+          <li>Cassper Nyovest</li>
+          <li>Laduma Ngxokolo</li>
+          <li>Siya Kolisi</li>
+          <li>Kabza De Small</li>
+          <li>Bonang Matheba</li>
+          <li>Nomzamo Mbatha</li>
+          <li>Thuso Mbedu</li>
+          <li>Amanda Du-Pont</li>
+          <li>Sho Madjozi</li>
+          <li>Nasty C</li>
+          <li>Jessé Manuel</li>
+          <li>Maria Borges</li>
+          <li>Anna Joyce</li>
+          <li>Soraya Da Piedade</li>
+          <li>Tyla</li>
+          <li>DJ Maphorisa</li>
+          <li>MaWhoo</li>
+        </ul>
+      </div>
+
+      <div class="region">
+        <h3 class="region-title">Northern Africa <span class="region-count">7</span></h3>
+        <ul class="amb-list">
+          <li>Mohamed Salah</li>
+          <li>Brahim Díaz</li>
+          <li>Yassine Bounou (“Bono”)</li>
+          <li>Nora Fatehi</li>
+          <li>Achraf Hakimi</li>
+          <li>Omar Marmoush</li>
+          <li>Riyad Mahrez</li>
+        </ul>
+      </div>
+
+      <div class="region">
+        <h3 class="region-title">Central Africa <span class="region-count">17</span></h3>
+        <ul class="amb-list">
+          <li>Samuel Eto’o</li>
+          <li>Charlotte Dipanda</li>
+          <li>Emmanuel N’Djoké “Manu” Dibango</li>
+          <li>Blanche Bahoken</li>
+          <li>Ivana Ononino</li>
+          <li>KO-C</li>
+          <li>Bethlehem Tilahun Alemu</li>
+          <li>Chef Yohanis (Yohannes Gebreegziabher)</li>
+          <li>Selam Tesfaye</li>
+          <li>Géraldine Yema Robert</li>
+          <li>Gwen Madiba</li>
+          <li>Rebo Tchulo</li>
+          <li>Fally Ipupa</li>
+          <li>Didi-Stone</li>
+          <li>Innoss’B</li>
+          <li>Michel Kuka Mboladinga (Lumumba VEA)</li>
+          <li>Sista Becky</li>
+        </ul>
+      </div>
+
+      <div class="region">
+        <h3 class="region-title">Eastern Africa <span class="region-count">19</span></h3>
+        <ul class="amb-list">
+          <li>Ajib Gathoni</li>
+          <li>Eliud Kipchoge</li>
+          <li>Lupita Nyong’o</li>
+          <li>Bien-Aimé Baraza</li>
+          <li>Savara</li>
+          <li>Sarah Hassan</li>
+          <li>Akothee</li>
+          <li>Juliani</li>
+          <li>Boniface Mwangi</li>
+          <li>Njeri wa Migwi</li>
+          <li>Liya Kebede</li>
+          <li>Spice Diana</li>
+          <li>Diamond Platnumz</li>
+          <li>Eddy Kenzo</li>
+          <li>Sheebah Karungi</li>
+          <li>James Mwangi</li>
+          <li>Vimal Shah</li>
+          <li>Anyiko Owoko</li>
+          <li>Brian Babu</li>
+        </ul>
+      </div>
+
+      <div class="callout" style="margin-top:1.25rem">
+        <p><strong>Notes for editors.</strong> Media enquiries:
+        <a href="mailto:convo@hoodmanlive.com?subject=Media%20enquiry%20for%20BAAH%20PLATINUM">convo@hoodmanlive.com</a>.
+        Photographs and the full list of honorees are available on request.</p>
+      </div>
+    </section>
+
+    <section id="issued">
+      <h2><span class="sec-num">10</span> Issued by</h2>
+      <div class="sig-block">
+        <div class="sig">
+          <p class="sig-name">Hoodman</p>
+          <p class="sig-role">Chief Editor,<br>HoodmanLive</p>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <p>
+      <strong>© 2026 HoodmanLive. All rights reserved.</strong>
+    </p>
+    <p>
+      Contact:
+      <a href="mailto:convo@hoodmanlive.com?subject=Enquiry%20for%20HoodmanLive">convo@hoodmanlive.com</a>
+      · <a href="#top">Back to top ↑</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+  /* ---- reading progress ---- */
+  (function () {
+    const bar = document.getElementById('progressBar');
+    function update() {
+      const el = document.documentElement;
+      const max = el.scrollHeight - el.clientHeight;
+      bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(el.scrollTop / max, 1) : 0) + ')';
+    }
+    addEventListener('scroll', update, { passive: true });
+    addEventListener('resize', update);
+    update();
+  })();
+
+  /* ---- scroll spy for table of contents ---- */
+  (function () {
+    const links = Array.from(document.querySelectorAll('.toc a[href^="#"]'));
+    if (!links.length) return;
+
+    const byId = new Map(links.map(a => [a.getAttribute('href').slice(1), a]));
+    const sections = Array.from(document.querySelectorAll('.doc section[id]'));
+
+    const setActive = id => {
+      links.forEach(a => a.classList.remove('active'));
+      const link = byId.get(id);
+      if (link) link.classList.add('active');
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries
+          .filter(e => e.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length) setActive(visible[0].target.id);
+      }, { rootMargin: '-90px 0px -65% 0px', threshold: 0 });
+
+      sections.forEach(s => observer.observe(s));
+    }
+  })();
+
+  /* ---- copy link ---- */
+  (function () {
+    const btn = document.getElementById('copyLink');
+    const original = btn.textContent;
+
+    async function copy(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (e) {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.setAttribute('readonly', '');
+        ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+        document.body.appendChild(ta);
+        ta.select();
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch (_) {}
+        ta.remove();
+        return ok;
+      }
+    }
+
+    btn.addEventListener('click', async () => {
+      const ok = await copy(location.href);
+      btn.textContent = ok ? 'Link copied' : 'Copy failed';
+      setTimeout(() => { btn.textContent = original; }, 1800);
+    });
+  })();
+
+  /* ---- print ---- */
+  document.getElementById('printBtn').addEventListener('click', () => window.print());
+</script>
+
+</body>
+</html>
