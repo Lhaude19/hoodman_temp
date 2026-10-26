@@ -6,22 +6,47 @@ import bodyHtml from "../content/communique.html?raw";
 const TITLE = "BAAH PLATINUM™ — Brands Ambassador Africa Impact Honors";
 const DESC =
   "BAAH PLATINUM™ recognizes Africa's Top 100 brand ambassadors turning brand influence into economic growth and social impact.";
+const SITE = "https://html-to-living-page.lovable.app/";
+const IMG = "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2012-100.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: TITLE },
       { name: "description", content: DESC },
+      { name: "keywords", content: "BAAH PLATINUM, Brands Ambassador Africa Impact Honors, African brand ambassadors, Top 100 brand ambassadors Africa, Africa influencers, brand influence, social impact, economic growth" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "author", content: "BAAH PLATINUM™" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "article" },
+      { property: "og:url", content: SITE },
+      { property: "og:site_name", content: "BAAH PLATINUM™" },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:image", content: IMG },
+      { property: "og:image:alt", content: "BAAH PLATINUM™ Brands Ambassador Africa Impact Honors" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2012-100.jpg" },
-      { name: "twitter:image", content: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2012-100.jpg" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESC },
+      { name: "twitter:image", content: IMG },
     ],
     links: [
+      { rel: "canonical", href: SITE },
       { rel: "stylesheet", href: pageCss },
-      { rel: "icon", type: "image/png", href: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            { "@type": "Organization", "@id": `${SITE}#org`, name: "BAAH PLATINUM™", alternateName: "Brands Ambassador Africa Impact Honors", url: SITE, logo: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png" },
+            { "@type": "WebSite", name: "BAAH PLATINUM™", url: SITE, publisher: { "@id": `${SITE}#org` } },
+            { "@type": "NewsArticle", headline: "BAAH PLATINUM™ Recognizes African Brand Ambassadors Turning Brand Influence into Economic Growth and Social Impact", description: DESC, image: [IMG], url: SITE, mainEntityOfPage: SITE, author: { "@id": `${SITE}#org` }, publisher: { "@id": `${SITE}#org` }, inLanguage: "en" },
+          ],
+        }),
+      },
     ],
   }),
   component: Index,
