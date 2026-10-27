@@ -449,7 +449,7 @@
     url("https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2014-100.jpg");
   background-position:center, right center;
   background-repeat:no-repeat;
-  background-size:100% 100%, auto 100%;
+  background-size:100% 100%, contain;
 }
 .hero-main{display:block;max-width:var(--maxw);margin:0 auto;position:relative;z-index:1}
 .hero-copy{max-width:760px;min-width:0}
@@ -474,7 +474,7 @@
 .issued-by p:first-child{font-size:1.05rem}
 .issued-by p:last-child{margin-bottom:0}
 @media(max-width:760px){
-  .hero{min-height:0;padding:3rem 1.25rem 1.25rem;background-size:100% 100%,auto 100%;background-position:center,right center}
+  .hero{min-height:0;padding:3rem 1.25rem 1.25rem;background-size:100% 100%,contain;background-position:center,right center}
   .hero-main{width:100%}
   .hero-copy{max-width:100%;padding-right:0}
   .hero-copy h1{max-width:20ch}
