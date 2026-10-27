@@ -6,8 +6,9 @@ import bodyHtml from "../content/communique.html?raw";
 const TITLE = "BAAH PLATINUM™ — Brands Ambassador Africa Impact Honors";
 const DESC =
   "BAAH PLATINUM™ recognizes Africa's Top 100 brand ambassadors turning brand influence into economic growth and social impact.";
-const SITE = "https://html-to-living-page.lovable.app/";
-const IMG = "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2012-100.jpg";
+const SITE = "https://hoodmanlive.com/";
+const IMG = "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2014-100.jpg";
+const IS_PRODUCTION = typeof process !== "undefined" && process.env.VERCEL_ENV === "production";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -15,7 +16,7 @@ export const Route = createFileRoute("/")({
       { title: TITLE },
       { name: "description", content: DESC },
       { name: "keywords", content: "BAAH PLATINUM, Brands Ambassador Africa Impact Honors, African brand ambassadors, Top 100 brand ambassadors Africa, Africa influencers, brand influence, social impact, economic growth" },
-      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
+      { name: "robots", content: IS_PRODUCTION ? "index, follow, max-image-preview:large, max-snippet:-1" : "noindex, nofollow" },
       { name: "author", content: "BAAH PLATINUM™" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
@@ -26,6 +27,7 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: IMG },
       { property: "og:image:alt", content: "BAAH PLATINUM™ Brands Ambassador Africa Impact Honors" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:url", content: SITE },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESC },
       { name: "twitter:image", content: IMG },
@@ -33,7 +35,7 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: SITE },
       { rel: "stylesheet", href: pageCss },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "icon", type: "image/png", href: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png" },
     ],
     scripts: [
       {
