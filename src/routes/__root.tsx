@@ -81,6 +81,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Explore BAAH PLATINUM™, the African brand ambassador recognition initiative focused on measurable brand impact, enterprise growth and social development." },
       { name: "robots", content: typeof process !== "undefined" && process.env.VERCEL_ENV === "production" ? "index, follow" : "noindex, nofollow" },
       { name: "author", content: "HoodmanLive" },
+      { property: "og:url", content: "https://hoodmanlive.com/" },
+      { property: "og:site_name", content: "HoodmanLive" },
       { property: "og:title", content: "BAAH PLATINUM™ — African Brand Ambassador Impact Honors | HoodmanLive" },
       { property: "og:description", content: "Recognising African brand ambassadors turning brand influence into economic growth and social impact." },
       { property: "og:type", content: "website" },
