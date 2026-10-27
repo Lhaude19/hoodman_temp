@@ -36,10 +36,6 @@ function OrganizationProfilePage() {
     <main className="profile-page">
       <Link to="/" className="profile-back">← Back to communiqué</Link>
       <article className="profile-doc organization-profile" dangerouslySetInnerHTML={{ __html: profileHtml }} />
-      <div className="issued-by" aria-label="Issued by">
-        <p><strong>Issued by: Hoodman</strong></p>
-        <p>Chief Editor, HoodmanLive</p>
-      </div>
     </main>
   );
 }
