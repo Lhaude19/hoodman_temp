@@ -446,7 +446,7 @@
       rgba(251,250,247,.90) 43%,
       rgba(251,250,247,.48) 62%,
       rgba(251,250,247,.04) 100%),
-    url("/images/baa-hero.jpg");
+    url("https://raw.githubusercontent.com/Lhaude19/image_bucket/main/baa.png");
   background-position:center, right center;
   background-repeat:no-repeat;
   background-size:100% 100%, contain;
