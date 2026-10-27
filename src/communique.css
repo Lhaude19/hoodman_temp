@@ -446,7 +446,7 @@
       rgba(251,250,247,.90) 43%,
       rgba(251,250,247,.48) 62%,
       rgba(251,250,247,.04) 100%),
-    url("https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2014-100.jpg");
+    url("/images/baa-hero.jpg");
   background-position:center, right center;
   background-repeat:no-repeat;
   background-size:100% 100%, contain;
@@ -490,3 +490,26 @@
   .hero::after{display:none}
   .issued-by{break-inside:avoid}
 }
+
+
+/* Separate organisation profile page and end-of-communiqué CTA */
+.profile-page{max-width:900px;margin:0 auto;padding:clamp(1.25rem,4vw,3rem)}
+.profile-page .profile-doc{max-width:72ch;margin:0 auto;background:#fff;border:1px solid var(--rule);border-radius:18px;padding:clamp(1.5rem,3vw,2.75rem);box-shadow:0 22px 46px -30px rgba(21,23,28,.3)}
+.profile-page .profile-title{font-family:var(--sans);font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.2;letter-spacing:-.02em;color:var(--ink);margin:0 0 1.5rem}
+.profile-page .organization-profile h3{font-family:var(--sans);font-size:.9rem;font-weight:700;line-height:1.45;letter-spacing:.015em;color:var(--accent-ink);margin:2rem 0 .85rem}
+.profile-page .organization-profile p,.profile-page .organization-profile li{font-family:var(--serif);font-size:1.0625rem;line-height:1.78;color:#22252c}
+.profile-page .organization-profile a{overflow-wrap:anywhere}
+.profile-page .profile-back{display:inline-flex;align-items:center;gap:.4rem;margin-bottom:1.25rem;font-family:var(--sans);font-size:.88rem;font-weight:650;text-decoration:none}
+.profile-cta{padding:1.5rem;border:1px solid var(--rule);border-radius:14px;background:var(--accent-wash);margin:2rem 0}
+.profile-cta h2{margin-top:0}
+.profile-cta .btn{display:inline-flex;text-decoration:none;align-items:center}
+.issued-by{border-top:1px solid var(--rule);margin-top:2.5rem;padding-top:1.5rem;font-family:var(--serif)}
+.issued-by p{margin:0 0 .25rem}
+.issued-by p:first-child{font-size:1.05rem}
+.issued-by p:last-child{margin-bottom:0}
+@media(max-width:760px){
+ .hero{background-size:100% 100%,contain}
+ .profile-page{padding:1rem}
+ .profile-page .profile-doc{padding:1.25rem}
+}
+@media print{.profile-cta{break-inside:avoid}}
