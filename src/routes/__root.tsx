@@ -36,7 +36,6 @@ function NotFoundComponent() {
 }
 
 function ErrorComponent({ error, reset }: ErrorComponentProps) {
-  console.error(error);
   const router = useRouter();
   useEffect(() => {
     reportLovableError(error, { boundary: "tanstack_root_error_component" });
@@ -46,10 +45,10 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+          HoodmanLive couldn't load this page
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          An unexpected error interrupted this page. Please try again, or return to the BAAH PLATINUM™ communiqué.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -78,21 +77,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "BAAH PLATINUM™" },
-      { name: "description", content: "BAAH PLATINUM™ media communiqué" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "BAAH PLATINUM™" },
-      { property: "og:description", content: "BAAH PLATINUM™ media communiqué" },
+      { title: "BAAH PLATINUM™ — African Brand Ambassador Impact Honors | HoodmanLive" },
+      { name: "description", content: "Explore BAAH PLATINUM™, the African brand ambassador recognition initiative focused on measurable brand impact, enterprise growth and social development." },
+      { name: "robots", content: typeof process !== "undefined" && process.env.VERCEL_ENV === "production" ? "index, follow" : "noindex, nofollow" },
+      { name: "author", content: "HoodmanLive" },
+      { property: "og:title", content: "BAAH PLATINUM™ — African Brand Ambassador Impact Honors | HoodmanLive" },
+      { property: "og:description", content: "Recognising African brand ambassadors turning brand influence into economic growth and social impact." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:image", content: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2014-100.jpg" },
+      { property: "og:image:alt", content: "BAAH PLATINUM™ African Brand Ambassador Impact Honors" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "icon", type: "image/png", href: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png" },
     ],
   }),
   shellComponent: RootShell,
