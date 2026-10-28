@@ -733,3 +733,22 @@
   .profile-page .profile-layout{display:block}
   .profile-page .profile-doc{width:100%;max-width:none}
 }
+
+
+/* Give every profile content block consistent breathing room inside the document panel.
+   Keep the dark profile hero full-bleed within the panel. */
+.profile-page .organization-profile > :not(.profile-hero){
+  box-sizing:border-box;
+  margin-left:clamp(1.5rem,5vw,3rem);
+  margin-right:clamp(1.5rem,5vw,3rem);
+}
+.profile-page .organization-profile > :not(.profile-hero) img,
+.profile-page .organization-profile > :not(.profile-hero) table{
+  max-width:100%;
+}
+@media(max-width:760px){
+  .profile-page .organization-profile > :not(.profile-hero){
+    margin-left:1.25rem;
+    margin-right:1.25rem;
+  }
+}
