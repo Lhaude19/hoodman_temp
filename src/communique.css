@@ -618,3 +618,46 @@
     margin-top: 1rem;
   }
 }
+
+
+/* Organisation profile title hierarchy and single-line strapline */
+.profile-page .profile-title{
+  max-width:none;
+  text-wrap:initial;
+}
+.profile-page .profile-title-primary,
+.profile-page .profile-title-secondary{
+  display:block;
+}
+.profile-page .profile-title-primary{
+  font-size:clamp(1.55rem,3.15vw,2.65rem);
+  line-height:1.16;
+  letter-spacing:-.03em;
+}
+.profile-page .profile-title-secondary{
+  margin-top:.45rem;
+  font-size:clamp(1.25rem,2.5vw,2.05rem);
+  line-height:1.2;
+  letter-spacing:-.025em;
+  color:#eee2cd;
+}
+.profile-page .profile-deck{
+  max-width:none;
+  white-space:nowrap;
+  font-size:clamp(.64rem,.95vw,.85rem);
+  line-height:1.6;
+  letter-spacing:.015em;
+}
+.profile-page .profile-deck span{padding:0 .2rem}
+@media(max-width:900px){
+  .profile-page .profile-deck{
+    white-space:normal;
+    max-width:100%;
+    line-height:1.8;
+  }
+}
+@media(max-width:560px){
+  .profile-page .profile-title-primary{font-size:clamp(1.35rem,6vw,1.8rem)}
+  .profile-page .profile-title-secondary{font-size:clamp(1.15rem,5vw,1.5rem)}
+  .profile-page .profile-deck{font-size:.72rem}
+}
