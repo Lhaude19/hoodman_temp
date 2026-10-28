@@ -27,15 +27,48 @@ export const Route = createFileRoute("/organization-profile")({
 
 function OrganizationProfilePage() {
   useEffect(() => {
-    document.querySelectorAll<HTMLElement>(".organization-profile h3").forEach((heading) => {
+    const headings = Array.from(document.querySelectorAll<HTMLElement>(".organization-profile h3[id]"));
+    headings.forEach((heading) => {
       heading.style.scrollMarginTop = "1.5rem";
     });
+
+    const links = Array.from(document.querySelectorAll<HTMLAnchorElement>(".profile-toc a"));
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (visible.length) {
+          const id = (visible[0]!.target as HTMLElement).id;
+          links.forEach((link) => link.classList.toggle("active", link.hash === `#${id}`));
+        }
+      },
+      { rootMargin: "-90px 0px -65% 0px" },
+    );
+    headings.forEach((heading) => observer.observe(heading));
+    return () => observer.disconnect();
   }, []);
 
   return (
     <main className="profile-page">
       <Link to="/" className="profile-back">← Back to communiqué</Link>
-      <article className="profile-doc organization-profile" dangerouslySetInnerHTML={{ __html: profileHtml }} />
+      <div className="profile-layout">
+        <aside className="toc profile-toc">
+          <p className="toc-title">Profile contents</p>
+          <nav aria-label="Organisation profile contents">
+            <a href="#executive-overview">Executive Overview</a>
+            <a href="#institutional-heritage">Institutional Heritage</a>
+            <a href="#heleh-honours">HELEH Africa PCP Honours</a>
+            <a href="#cov-week">COV-WEEK 2020</a>
+            <a href="#royal-citizen-honours">Royal Citizen Honours</a>
+            <a href="#institutional-evolution">Institutional Evolution</a>
+            <a href="#baah-platinum">BAAH Platinum™ Opportunity</a>
+            <a href="#partnership-proposition">Partnership Proposition</a>
+            <a href="#executive-conclusion">Executive Conclusion</a>
+          </nav>
+        </aside>
+        <article className="profile-doc organization-profile" dangerouslySetInnerHTML={{ __html: profileHtml }} />
+      </div>
     </main>
   );
 }
