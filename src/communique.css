@@ -159,7 +159,8 @@
 
   /* ---------- document sheet ---------- */
   .doc{
-    max-width:72ch;
+    max-width:82.8ch;
+    width:115%;
     background:#fff;border:1px solid var(--rule);border-radius:18px;
     padding:clamp(1.5rem,3vw,2.75rem);
     box-shadow:
@@ -533,7 +534,7 @@
   position: absolute;
   z-index: 0;
   top: clamp(2.75rem, 6vw, 5rem);
-  right: 0;
+  right: max(1.5rem, calc((100vw - var(--maxw)) / 2 + 1.5rem));
   width: min(49%, 560px);
   height: clamp(300px, 36vw, 440px);
   object-fit: contain;
@@ -580,9 +581,13 @@
   .hero {
     padding-top: 2.5rem;
   }
+  .doc {
+    width: 100%;
+    max-width: 100%;
+  }
   .hero .hero-art {
     top: 2.5rem;
-    right: -1.5rem;
+    right: 0;
     width: 70%;
     height: 260px;
     opacity: .28;
