@@ -426,11 +426,11 @@
 .hero .meta{position:relative;z-index:1}
 .partner-list{columns:2;column-gap:2rem}
 .partner-list li{break-inside:avoid}
-.organization-profile h3{font-family:var(--sans);font-size:.9rem;line-height:1.45;letter-spacing:.015em;color:var(--accent-ink);margin:2rem 0 .85rem}
-.organization-profile h3:first-of-type{margin-top:1.5rem}
-.organization-profile ol{padding-left:1.4rem;margin:0 0 1.25rem}
-.organization-profile ol li{padding:.25rem 0;font-size:1.0625rem;line-height:1.78}
-.organization-profile a{color:var(--accent-ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
+.organisation-profile h3{font-family:var(--sans);font-size:.9rem;line-height:1.45;letter-spacing:.015em;color:var(--accent-ink);margin:2rem 0 .85rem}
+.organisation-profile h3:first-of-type{margin-top:1.5rem}
+.organisation-profile ol{padding-left:1.4rem;margin:0 0 1.25rem}
+.organisation-profile ol li{padding:.25rem 0;font-size:1.0625rem;line-height:1.78}
+.organisation-profile a{color:var(--accent-ink);font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 @media(max-width:760px){.hero-main{grid-template-columns:1fr;gap:1.25rem}.hero-figure{max-width:480px}.partner-list{columns:1}}
 @media print{.hero-main{grid-template-columns:1.2fr .8fr}.hero-figure{box-shadow:none}}
 
@@ -495,20 +495,20 @@
 .profile-page .profile-title{max-width:23ch;font-family:var(--sans);font-size:clamp(1.7rem,3.6vw,3rem);line-height:1.12;letter-spacing:-.035em;color:#fff;margin:0 0 1.25rem}
 .profile-page .profile-deck{max-width:70ch;margin:0;font-family:var(--sans);font-size:.85rem;line-height:1.8;letter-spacing:.025em;color:#eee2cd}
 .profile-page .profile-deck span{color:#dfc18b;padding:0 .3rem}
-.profile-page .organization-profile>h3,.profile-page .organization-profile>p,.profile-page .organization-profile>ul,.profile-page .organization-profile>ol,.profile-page .organization-profile>div:not(.profile-hero){
+.profile-page .organisation-profile>h3,.profile-page .organisation-profile>p,.profile-page .organisation-profile>ul,.profile-page .organisation-profile>ol,.profile-page .organisation-profile>div:not(.profile-hero){
   margin-left:clamp(1.25rem,4vw,3.5rem);margin-right:clamp(1.25rem,4vw,3.5rem)
 }
-.profile-page .organization-profile>h3{
+.profile-page .organisation-profile>h3{
   padding:1rem 0 .7rem;border-bottom:1px solid var(--rule);
   font-family:var(--sans);font-size:1rem;font-weight:750;line-height:1.45;
   letter-spacing:.01em;color:var(--accent-ink);margin-top:2.2rem;margin-bottom:.9rem
 }
-.profile-page .organization-profile>p,.profile-page .organization-profile li{
+.profile-page .organisation-profile>p,.profile-page .organisation-profile li{
   font-family:var(--serif);font-size:1.0625rem;line-height:1.8;color:#292a2d
 }
-.profile-page .organization-profile>p:first-of-type{font-size:1.1rem}
-.profile-page .organization-profile>p:last-child{padding-bottom:2rem}
-.profile-page .organization-profile a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
+.profile-page .organisation-profile>p:first-of-type{font-size:1.1rem}
+.profile-page .organisation-profile>p:last-child{padding-bottom:2rem}
+.profile-page .organisation-profile a{color:var(--accent-ink);text-decoration-thickness:1px;text-underline-offset:3px;overflow-wrap:anywhere}
 @media(max-width:760px){
  .hero{min-height:480px;padding:2.5rem 1.25rem 1.25rem}
  .hero .hero-art{width:100%;height:52%;top:auto;bottom:0;right:0;object-position:right bottom;opacity:.98;z-index:0}
@@ -521,7 +521,7 @@
  .issued-by{left:auto;width:100%;max-width:100%;padding:1rem}
   .profile-page{padding:1rem 1rem 2rem}
  .profile-page .profile-hero{padding:1.5rem}
- .profile-page .organization-profile>h3,.profile-page .organization-profile>p,.profile-page .organization-profile>ul,.profile-page .organization-profile>ol,.profile-page .organization-profile>div:not(.profile-hero){margin-left:1.25rem;margin-right:1.25rem}
+ .profile-page .organisation-profile>h3,.profile-page .organisation-profile>p,.profile-page .organisation-profile>ul,.profile-page .organisation-profile>ol,.profile-page .organisation-profile>div:not(.profile-hero){margin-left:1.25rem;margin-right:1.25rem}
 }
 @media print{
  .hero{max-width:none;min-height:0;padding:0 0 1rem;background-image:none}
@@ -737,17 +737,17 @@
 
 /* Give every profile content block consistent breathing room inside the document panel.
    Keep the dark profile hero full-bleed within the panel. */
-.profile-page .organization-profile > :not(.profile-hero){
+.profile-page .organisation-profile > :not(.profile-hero){
   box-sizing:border-box;
   margin-left:clamp(1.5rem,5vw,3rem);
   margin-right:clamp(1.5rem,5vw,3rem);
 }
-.profile-page .organization-profile > :not(.profile-hero) img,
-.profile-page .organization-profile > :not(.profile-hero) table{
+.profile-page .organisation-profile > :not(.profile-hero) img,
+.profile-page .organisation-profile > :not(.profile-hero) table{
   max-width:100%;
 }
 @media(max-width:760px){
-  .profile-page .organization-profile > :not(.profile-hero){
+  .profile-page .organisation-profile > :not(.profile-hero){
     margin-left:1.25rem;
     margin-right:1.25rem;
   }
@@ -755,16 +755,16 @@
 
 
 /* Keep the profile header contained by the document rectangle. */
-.profile-page .organization-profile,
-.profile-page .organization-profile > .profile-hero{
+.profile-page .organisation-profile,
+.profile-page .organisation-profile > .profile-hero{
   box-sizing:border-box;
   width:100%;
   min-width:0;
 }
-.profile-page .organization-profile > .profile-hero{
+.profile-page .organisation-profile > .profile-hero{
   max-width:100%;
   overflow:hidden;
 }
-.profile-page .organization-profile .profile-deck{
+.profile-page .organisation-profile .profile-deck{
   overflow-wrap:anywhere;
 }
