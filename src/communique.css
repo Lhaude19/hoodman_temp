@@ -768,3 +768,18 @@
 .profile-page .organisation-profile .profile-deck{
   overflow-wrap:anywhere;
 }
+
+
+/* Keep the organisation's primary name on one line where the header has room. */
+.profile-page .profile-title-primary{
+  white-space:nowrap;
+  font-size:clamp(1.2rem,2.65vw,2.35rem);
+  letter-spacing:-.035em;
+}
+@media(max-width:760px){
+  .profile-page .profile-title-primary{
+    white-space:normal;
+    overflow-wrap:normal;
+    font-size:clamp(1.25rem,5vw,1.8rem);
+  }
+}
