@@ -752,3 +752,19 @@
     margin-right:1.25rem;
   }
 }
+
+
+/* Keep the profile header contained by the document rectangle. */
+.profile-page .organization-profile,
+.profile-page .organization-profile > .profile-hero{
+  box-sizing:border-box;
+  width:100%;
+  min-width:0;
+}
+.profile-page .organization-profile > .profile-hero{
+  max-width:100%;
+  overflow:hidden;
+}
+.profile-page .organization-profile .profile-deck{
+  overflow-wrap:anywhere;
+}
