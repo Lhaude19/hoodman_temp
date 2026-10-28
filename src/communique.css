@@ -661,3 +661,44 @@
   .profile-page .profile-title-secondary{font-size:clamp(1.15rem,5vw,1.5rem)}
   .profile-page .profile-deck{font-size:.72rem}
 }
+
+
+/* Organisation profile contents navigation */
+.profile-page .profile-layout{
+  display:grid;
+  grid-template-columns:220px minmax(0,1fr);
+  gap:2rem;
+  align-items:start;
+}
+.profile-page .profile-toc{
+  top:1.5rem;
+  max-height:calc(100vh - 3rem);
+  overflow-y:auto;
+}
+.profile-page .profile-toc .toc-title{margin-bottom:.85rem}
+.profile-page .profile-toc nav a{font-size:.78rem}
+.profile-page .profile-doc{min-width:0}
+@media(max-width:900px){
+  .profile-page .profile-layout{grid-template-columns:1fr;gap:1.25rem}
+  .profile-page .profile-toc{position:static;max-height:none;display:block}
+  .profile-page .profile-toc nav{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:0 .75rem;
+    border-left:0;
+  }
+  .profile-page .profile-toc nav a{
+    padding:.55rem .25rem;
+    margin:0;
+    border-left:0;
+    border-bottom:1px solid var(--rule);
+  }
+  .profile-page .profile-toc nav a.active{border-bottom-color:var(--accent)}
+}
+@media(max-width:560px){
+  .profile-page .profile-toc nav{grid-template-columns:1fr}
+}
+@media print{
+  .profile-page .profile-toc{display:none!important}
+  .profile-page .profile-layout{display:block}
+}
