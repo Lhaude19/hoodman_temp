@@ -666,9 +666,21 @@
 /* Organisation profile contents navigation */
 .profile-page .profile-layout{
   display:grid;
+  width:100%;
   grid-template-columns:220px minmax(0,1fr);
   gap:2rem;
   align-items:start;
+}
+.profile-page .profile-toc,
+.profile-page .profile-doc{
+  box-sizing:border-box;
+  margin-top:0;
+  align-self:start;
+}
+.profile-page .profile-doc{
+  width:100%;
+  max-width:none;
+  justify-self:stretch;
 }
 .profile-page .profile-toc{
   top:1.5rem;
