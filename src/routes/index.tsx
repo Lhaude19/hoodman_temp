@@ -5,7 +5,7 @@ import bodyHtml from "../content/communique.html?raw";
 
 const TITLE = "BAAH PLATINUM™ — Brands Ambassador Africa Impact Honors";
 const DESC =
-  "BAAH PLATINUM™ recognizes Africa's Top 100 brand ambassadors turning brand influence into economic growth and social impact.";
+  "BAAH PLATINUM™ recognises Africa's Top 100 brand ambassadors turning brand influence into economic growth and social impact.";
 const SITE = "https://hoodmanlive.com/";
 const IMG = "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Asset%2014-100.jpg";
 const IS_PRODUCTION = typeof process !== "undefined" && process.env.VERCEL_ENV === "production";
@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "article" },
       { property: "og:url", content: SITE },
       { property: "og:site_name", content: "BAAH PLATINUM™" },
-      { property: "og:locale", content: "en_US" },
+      { property: "og:locale", content: "en_GB" },
       { property: "og:image", content: IMG },
       { property: "og:image:alt", content: "BAAH PLATINUM™ Brands Ambassador Africa Impact Honors" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/")({
           "@graph": [
             { "@type": "Organization", "@id": `${SITE}#org`, name: "BAAH PLATINUM™", alternateName: "Brands Ambassador Africa Impact Honors", url: SITE, logo: "https://raw.githubusercontent.com/Lhaude19/image_bucket/main/Group%201.png" },
             { "@type": "WebSite", name: "BAAH PLATINUM™", url: SITE, publisher: { "@id": `${SITE}#org` } },
-            { "@type": "NewsArticle", headline: "BAAH PLATINUM™ Recognizes African Brand Ambassadors Turning Brand Influence into Economic Growth and Social Impact", description: DESC, image: [IMG], url: SITE, mainEntityOfPage: SITE, author: { "@id": `${SITE}#org` }, publisher: { "@id": `${SITE}#org` }, inLanguage: "en" },
+            { "@type": "NewsArticle", headline: "BAAH PLATINUM™ Recognises African Brand Ambassadors Turning Brand Influence into Economic Growth and Social Impact", description: DESC, image: [IMG], url: SITE, mainEntityOfPage: SITE, author: { "@id": `${SITE}#org` }, publisher: { "@id": `${SITE}#org` }, inLanguage: "en" },
           ],
         }),
       },
